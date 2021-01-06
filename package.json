@@ -26,7 +26,8 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest",
     "test:schema:sync": ". ./.env.test && ts-node node_modules/.bin/typeorm schema:sync",
     "test:schema:drop": ". ./.env.test && ts-node node_modules/.bin/typeorm schema:drop",
-    "test": "yarn test:lint && yarn test:type && yarn test:unit"
+    "test": "yarn test:lint && yarn test:type && yarn test:unit",
+    "prepare": "npm run build"
   },
   "peerDependencies": {
     "@nestjs/common": "^6.0.0",
